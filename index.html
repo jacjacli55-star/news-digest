@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily News Digest — 專案與工作流</title>
+<meta name="description" content="A fact-checked daily news digest that auto-runs at 08:00, screens sources, builds a Markdown/PDF + website, and uploads to Google Drive — visualized with Archify.">
+<style>
+  :root{--ink:#1d2129;--muted:#6b7280;--line:#e6e8ee;--bg:#f6f7f9;--card:#fff;--accent:#0b5394;}
+  *{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);line-height:1.6}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 22px 70px}
+  header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:34px;margin:0 0 6px;letter-spacing:-.5px}
+  .sub{color:var(--muted);font-size:15px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:26px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:var(--ink);display:block;transition:.18s}
+  .card:hover{box-shadow:0 10px 26px rgba(20,30,60,.10);transform:translateY(-2px)}
+  .card .tag{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.4px}
+  .card h2{margin:8px 0 6px;font-size:19px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+  h2.sect{font-size:15px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:34px 0 6px}
+  ul.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+  ul.flow li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13.5px}
+  ul.flow b{display:block;color:var(--accent);margin-bottom:2px}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Daily News Digest</h1>
+    <div class="sub">每日 08:00 自動運作的「事實查證」新聞摘要 · 使用 Archify 可視化</div>
+  </header>
+
+  <p>
+    這是一套自動化新聞流水線：定時採集本地與國際新聞、依來源可信度與多方交叉驗證
+    篩選、生成 Markdown + PDF 報告、建置靜態新聞網站，並自動上傳 Google Drive。
+    未經確認的新聞絕不會自動發出。
+  </p>
+
+  <div class="grid">
+    <a class="card" href="how-it-works.html">
+      <div class="tag">INTERACTIVE DIAGRAM · ARCHIFY</div>
+      <h2>How it works — 工作流圖</h2>
+      <p>可探索的交互式流程圖：08:00 觸發 → 採集 → 查證 → 生成 → 上傳。點節點、沿路徑觀看。</p>
+    </a>
+    <a class="card" href="portal.html">
+      <div class="tag">LIVE OUTPUT · NEWS PORTAL</div>
+      <h2>News Portal — 新聞門戶</h2>
+      <p>由本系統每日生成的乾淨新聞摘要網站（示範內容）。</p>
+    </a>
+  </div>
+
+  <h2 class="sect">Pipeline at a glance</h2>
+  <ul class="flow">
+    <li><b>Schedule</b>launchd 每日 08:00，無需人工</li>
+    <li><b>Ingest</b>Google News RSS · 6 大主題 · 本地+國際</li>
+    <li><b>Screen</b>Tier-1 可信源 + ≥2 家交叉驗證</li>
+    <li><b>Build</b>Markdown + PDF + 靜態網站</li>
+    <li><b>Deliver</b>上傳 Google Drive · 保留在地端</li>
+  </ul>
+
+  <footer>
+    Automated screening checks source credibility &amp; multi-outlet corroboration;
+    final human review recommended before redistribution.
+  </footer>
+</div>
+</body>
+</html>
